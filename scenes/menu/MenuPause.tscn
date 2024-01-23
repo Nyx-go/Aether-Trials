@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4egrom4kvdjc"]
+
+[ext_resource type="Script" path="res://scenes/menu/menuPause.gd" id="1_4k7nt"]
+[ext_resource type="FontFile" uid="uid://clr7cwm1ijv54" path="res://fonts/Pixeltype.ttf" id="2_efdyg"]
+
+[node name="MarginContainer" type="MarginContainer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -144.0
+offset_right = 136.0
+offset_bottom = 144.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 14
+script = ExtResource("1_4k7nt")
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_efdyg")
+theme_override_font_sizes/font_size = 64
+text = "PAUSE"
+horizontal_alignment = 1
+
+[node name="Reprendre" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_efdyg")
+theme_override_font_sizes/font_size = 64
+text = "REPRENDRE"
+
+[node name="Recommencer" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_efdyg")
+theme_override_font_sizes/font_size = 64
+text = "RECOMMENCER"
+
+[node name="Menu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_efdyg")
+theme_override_font_sizes/font_size = 64
+text = "MENU"
+
+[node name="Quitter" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_efdyg")
+theme_override_font_sizes/font_size = 64
+text = "QUITTER"
+
+[connection signal="pressed" from="VBoxContainer/Reprendre" to="VBoxContainer" method="_on_reprendre_pressed"]
+[connection signal="pressed" from="VBoxContainer/Recommencer" to="VBoxContainer" method="_on_recommencer_pressed"]
+[connection signal="pressed" from="VBoxContainer/Menu" to="VBoxContainer" method="_on_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quitter" to="VBoxContainer" method="_on_quitter_pressed"]
