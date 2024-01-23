@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cyfh0t4cp21kn"]
 
 [ext_resource type="Script" path="res://script/MenuPause.gd" id="1_uakkl"]
-[ext_resource type="FontFile" uid="uid://cl5kbfpthm7yk" path="res://fonts/Pixeltype.ttf" id="2_a3ods"]
+[ext_resource type="FontFile" uid="uid://csm64kc3g43kh" path="res://fonts/Pixeltype.ttf" id="2_a3ods"]
 
 [node name="MarginContainer" type="MarginContainer"]
 anchors_preset = 8
