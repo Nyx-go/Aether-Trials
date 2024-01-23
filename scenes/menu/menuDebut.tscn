@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bqkp36x5bief3"]
 
 [ext_resource type="Script" path="res://scenes/menu/menuDebut.gd" id="1_dbs0r"]
-[ext_resource type="FontFile" uid="uid://c4wkgsdp6fcjh" path="res://fonts/Pixeltype.ttf" id="2_14g0t"]
+[ext_resource type="FontFile" uid="uid://bwqxut1jgmy3d" path="res://fonts/Pixeltype.ttf" id="2_14g0t"]
 
 [node name="menuDebut" type="Control"]
 layout_mode = 3
