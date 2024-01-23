@@ -1,0 +1,98 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqkp36x5bief3"]
+
+[ext_resource type="Script" path="res://scripts/menuDebut.gd" id="1_dbs0r"]
+[ext_resource type="FontFile" uid="uid://dg2bonuafu8ss" path="res://fonts/Pixeltype.ttf" id="2_14g0t"]
+
+[node name="menuDebut" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dbs0r")
+
+[node name="VBoxText" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -590.0
+offset_top = 80.0
+offset_right = 590.0
+offset_bottom = 340.0
+grow_horizontal = 2
+
+[node name="Titre" type="Label" parent="VBoxText"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_14g0t")
+theme_override_font_sizes/font_size = 300
+text = "Titre du jeu !!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="VBoxText"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_14g0t")
+theme_override_font_sizes/font_size = 100
+text = "De la terre a l'Ether !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxButton" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="ButtonPlay" type="Button" parent="VBoxButton"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_14g0t")
+theme_override_font_sizes/font_size = 100
+text = "Play"
+
+[node name="ButtonSettings" type="Button" parent="VBoxButton"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_14g0t")
+theme_override_font_sizes/font_size = 100
+text = "Settings"
+
+[node name="ButtonQuit" type="Button" parent="VBoxButton"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_14g0t")
+theme_override_font_sizes/font_size = 100
+text = "Quit"
+
+[node name="Editeur" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -100.0
+offset_right = 230.0
+offset_bottom = -50.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_14g0t")
+theme_override_font_sizes/font_size = 60
+text = "by LDDTM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxButton/ButtonPlay" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="VBoxButton/ButtonSettings" to="." method="_on_button_settings_pressed"]
+[connection signal="pressed" from="VBoxButton/ButtonQuit" to="." method="_on_button_quit_pressed"]
