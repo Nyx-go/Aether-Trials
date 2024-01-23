@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsuhtk3n5t8xw"
-path="res://.godot/imported/playerGrey_walk1.png-47c02e09dd905ad6b446f5a6a229df21.ctex"
+uid="uid://lrf62f103uyv"
+path="res://.godot/imported/tiles-sheet-hell-1.png-4f8755a41e09a57b614eba7f2c42898f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/playerGrey_walk1.png"
-dest_files=["res://.godot/imported/playerGrey_walk1.png-47c02e09dd905ad6b446f5a6a229df21.ctex"]
+source_file="res://Sprite/Monde_1/tiles-sheet-hell-1.png"
+dest_files=["res://.godot/imported/tiles-sheet-hell-1.png-4f8755a41e09a57b614eba7f2c42898f.ctex"]
 
 [params]
 

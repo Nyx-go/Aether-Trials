@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://duo22ynnygtpt"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_516j8"]
-[ext_resource type="Texture2D" uid="uid://dsuhtk3n5t8xw" path="res://Sprite/playerGrey_walk1.png" id="2_m23y2"]
-[ext_resource type="Texture2D" uid="uid://cwlpcahuast6n" path="res://Sprite/playerGrey_walk2.png" id="3_4ckxd"]
+[ext_resource type="Texture2D" uid="uid://dsuhtk3n5t8xw" path="res://Sprite/Player_Element/playerGrey_walk1.png" id="2_m23y2"]
+[ext_resource type="Texture2D" uid="uid://cwlpcahuast6n" path="res://Sprite/Player_Element/playerGrey_walk2.png" id="3_4ckxd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2poc5"]
 radius = 5.0
