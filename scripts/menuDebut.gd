@@ -12,11 +12,11 @@ func _process(delta):
 
 
 func _on_button_play_pressed():
-	get_tree().change_scene("res://scenes/niveaux/M0_Tuto/Niveau_0.tscn")
+	get_tree().change_scene_to_file("res://scenes/niveaux/M0_Tuto/niveau_0.tscn")
 
 
 func _on_button_settings_pressed():
-	get_tree().change_scene("res://scenes/Option.tscn")
+	get_tree().change_scene_to_file("res://scenes/option.tscn")
 
 
 func _on_button_quit_pressed():
