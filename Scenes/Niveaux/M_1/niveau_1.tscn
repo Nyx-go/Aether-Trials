@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dmbjhpxwvflr2"]
+[gd_scene load_steps=26 format=3 uid="uid://dmbjhpxwvflr2"]
 
 [ext_resource type="Texture2D" uid="uid://gct8logf0kyr" path="res://Sprite/Monde_1/tiles-sheet-hell-1.png" id="1_i4446"]
 [ext_resource type="PackedScene" uid="uid://duo22ynnygtpt" path="res://Player/PlayerBase/Player.tscn" id="2_34e6j"]
@@ -167,6 +167,9 @@ size = Vector2(167.432, 29.8431)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v7n1f"]
 size = Vector2(1787, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ry138"]
+size = Vector2(210.869, 27.335)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qp3qu"]
 size = Vector2(32.0001, 1208)
@@ -990,7 +993,7 @@ scale = Vector2(5.40803, 0.606654)
 [node name="CollisionShape2D30" type="CollisionShape2D" parent="lastpart"]
 position = Vector2(3876, -1436)
 scale = Vector2(1.01814, 0.805059)
-shape = SubResource("RectangleShape2D_kutwi")
+shape = SubResource("RectangleShape2D_ry138")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="lastpart"]
 position = Vector2(3100, -1776)
@@ -1140,6 +1143,18 @@ offset_left = -1816.0
 offset_right = -1696.0
 offset_bottom = 68.0
 scale = Vector2(15, 1)
+
+[node name="Panel31" type="Panel" parent="lastpart"]
+offset_left = 4063.0
+offset_top = -1540.0
+offset_right = 4103.0
+offset_bottom = -1500.0
+scale = Vector2(5.40803, 0.606654)
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="lastpart"]
+position = Vector2(4171, -1528)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_ry138")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 112.0
