@@ -21,7 +21,6 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 
-<<<<<<< Updated upstream
 [input]
 
 ui_accept={
@@ -61,8 +60,6 @@ jump={
 ]
 }
 
-=======
->>>>>>> Stashed changes
 [rendering]
 
 renderer/rendering_method="mobile"
