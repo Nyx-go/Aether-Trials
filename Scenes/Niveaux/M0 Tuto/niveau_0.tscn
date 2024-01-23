@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://dun8llpt5vcu8"]
+
+[ext_resource type="PackedScene" uid="uid://duo22ynnygtpt" path="res://Player/Player.tscn" id="1_hwxm3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnkpm"]
+size = Vector2(1116, 242)
+
+[node name="niveau_0" type="Node2D"]
+position = Vector2(88, -411)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_hwxm3")]
+position = Vector2(480, 593)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(276, 693)
+scale = Vector2(1.00542, 0.536357)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(548, 111)
+shape = SubResource("RectangleShape2D_cnkpm")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(281, 1048)
+scale = Vector2(1.00101, 0.436489)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(548, 111)
+shape = SubResource("RectangleShape2D_cnkpm")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(-474, 621)
+rotation = 0.48518
+scale = Vector2(0.986461, 0.856192)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(548, 111)
+shape = SubResource("RectangleShape2D_cnkpm")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(116, 757)
+rotation = -0.39619
+scale = Vector2(0.16018, 0.116758)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(548, 111)
+shape = SubResource("RectangleShape2D_cnkpm")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 265.0
+offset_top = 681.0
+offset_right = 1385.0
+offset_bottom = 820.0
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 272.0
+offset_top = 1040.0
+offset_right = 1392.0
+offset_bottom = 1150.0
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 111.0
+offset_top = 753.0
+offset_right = 290.0
+offset_bottom = 876.0
+rotation = -0.401379
+scale = Vector2(1.0121, 0.275086)
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 394.0
+offset_top = 1337.0
+offset_right = 573.0
+offset_bottom = 1460.0
+rotation = 0.481748
+scale = Vector2(-6.2038, -1.95323)

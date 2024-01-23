@@ -10,10 +10,7 @@ config_version=5
 
 [application]
 
-config/name="AetherTrials"
-config/features=PackedStringArray("4.2", "Mobile")
+config/name="Aether-trials"
+run/main_scene="res://Scenes/Niveaux/M0 Tuto/niveau_0.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
-
-[rendering]
-
-renderer/rendering_method="mobile"

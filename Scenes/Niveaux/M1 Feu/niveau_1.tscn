@@ -1,0 +1,716 @@
+[gd_scene load_steps=17 format=3 uid="uid://m4nmc2n2we3a"]
+
+[ext_resource type="PackedScene" uid="uid://duo22ynnygtpt" path="res://Player/Player.tscn" id="1_a6xgo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sek7i"]
+size = Vector2(1935.13, 67)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vsghq"]
+size = Vector2(1163, 67)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf7r8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sln4a"]
+size = Vector2(200, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsbph"]
+size = Vector2(1538, 352)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0cy1"]
+size = Vector2(157, 615)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53ce0"]
+size = Vector2(157, 982)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmaaj"]
+size = Vector2(157, 982)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fsqtn"]
+size = Vector2(157, 2120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8f7yo"]
+size = Vector2(157, 958.1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqdx5"]
+size = Vector2(157, 240)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yi8h1"]
+size = Vector2(157, 1760)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kutwi"]
+size = Vector2(209.435, 34.7958)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tw5dj"]
+size = Vector2(167.432, 29.8431)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7n1f"]
+
+[node name="Niveau1" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_a6xgo")]
+position = Vector2(2296, -1696)
+scale = Vector2(3, 3)
+
+[node name="Begin plat" type="StaticBody2D" parent="."]
+position = Vector2(141, -563)
+
+[node name="CollisionShape2Dplat" type="CollisionShape2D" parent="Begin plat"]
+position = Vector2(433, 294)
+scale = Vector2(0.240018, 1.07564)
+shape = SubResource("RectangleShape2D_sek7i")
+
+[node name="Panel plat" type="Panel" parent="Begin plat"]
+offset_left = 201.0
+offset_top = 259.0
+offset_right = 666.0
+offset_bottom = 327.0
+scale = Vector2(0.994958, 1.03847)
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(141, -563)
+
+[node name="CollisionShape2DWall" type="CollisionShape2D" parent="Wall"]
+position = Vector2(-174, -419.5)
+rotation = -1.5708
+scale = Vector2(1.01544, 1)
+shape = SubResource("RectangleShape2D_sek7i")
+
+[node name="PanelWall" type="Panel" parent="Wall"]
+offset_left = -208.0
+offset_top = 564.0
+offset_right = 257.0
+offset_bottom = 632.0
+rotation = -1.5708
+scale = Vector2(4.23188, 0.992585)
+
+[node name="Label1" type="Label" parent="Wall"]
+offset_left = 2811.0
+offset_top = 347.0
+offset_right = 2943.0
+offset_bottom = 370.0
+scale = Vector2(1.86441, 2.10523)
+text = "MAIS QUI ES-TU ?"
+
+[node name="Label" type="Label" parent="Wall"]
+offset_left = 3891.0
+offset_top = 499.0
+offset_right = 4076.0
+offset_bottom = 522.0
+scale = Vector2(0.573093, 0.662362)
+text = "C'est pas par là désolé..."
+
+[node name="ground" type="StaticBody2D" parent="."]
+position = Vector2(59, -562)
+scale = Vector2(0.612884, 0.9988)
+
+[node name="CollisionShape2Dground" type="CollisionShape2D" parent="ground"]
+position = Vector2(3281, 597)
+scale = Vector2(6, 1.01065)
+shape = SubResource("RectangleShape2D_vsghq")
+
+[node name="Panelground" type="Panel" parent="ground"]
+offset_left = -208.0
+offset_top = 563.0
+offset_right = 257.0
+offset_bottom = 631.0
+scale = Vector2(15, 1)
+
+[node name="Wall2" type="StaticBody2D" parent="."]
+position = Vector2(4349, -563)
+
+[node name="CollisionShape2DWall" type="CollisionShape2D" parent="Wall2"]
+position = Vector2(-174, -419.5)
+rotation = -1.5708
+scale = Vector2(1.01544, 1)
+shape = SubResource("RectangleShape2D_sek7i")
+
+[node name="PanelWall" type="Panel" parent="Wall2"]
+offset_left = -208.0
+offset_top = 564.0
+offset_right = 257.0
+offset_bottom = 632.0
+rotation = -1.5708
+scale = Vector2(4.23188, 0.992585)
+
+[node name="ground2" type="StaticBody2D" parent="."]
+position = Vector2(57, -2597)
+scale = Vector2(0.613461, 0.99868)
+
+[node name="CollisionShape2Dground" type="CollisionShape2D" parent="ground2"]
+position = Vector2(3281, 597)
+scale = Vector2(6, 1.01065)
+shape = SubResource("RectangleShape2D_vsghq")
+
+[node name="Panelground" type="Panel" parent="ground2"]
+offset_left = -208.0
+offset_top = 563.0
+offset_right = 257.0
+offset_bottom = 631.0
+scale = Vector2(15, 1)
+
+[node name="plat" type="StaticBody2D" parent="."]
+position = Vector2(1066, -382)
+rotation = -0.412537
+scale = Vector2(11.3837, 1.46224)
+
+[node name="CollisionShape2Dplat" type="CollisionShape2D" parent="plat"]
+shape = SubResource("RectangleShape2D_yf7r8")
+
+[node name="Panel" type="Panel" parent="plat"]
+offset_left = -9.97931
+offset_top = -10.1129
+offset_right = 30.0207
+offset_bottom = 29.8871
+scale = Vector2(0.49926, 0.502985)
+
+[node name="bord" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="bord"]
+position = Vector2(1066, -382)
+rotation = -0.412537
+scale = Vector2(11.3837, 1.46224)
+polygon = PackedVector2Array(-19.9066, 185.242, -43.8183, 138.11, 0.940994, 286.88, 10.2088, 128.843)
+
+[node name="Panel" type="Panel" parent="bord"]
+offset_left = 1032.0
+offset_top = -96.0
+offset_right = 1068.0
+offset_bottom = -56.0
+rotation = -0.632047
+scale = Vector2(7.51183, 5.76423)
+
+[node name="Panel2" type="Panel" parent="bord"]
+offset_left = 848.0
+offset_top = 40.0
+offset_right = 888.0
+offset_bottom = 80.0
+rotation = -0.62091
+scale = Vector2(7.51183, 5.76423)
+
+[node name="Panel3" type="Panel" parent="bord"]
+offset_left = 688.0
+offset_top = -1.04904e-05
+offset_right = 728.0
+offset_bottom = 40.0
+rotation = -0.152684
+scale = Vector2(7.51183, 5.76423)
+
+[node name="Panel4" type="Panel" parent="bord"]
+offset_left = 1336.0
+offset_top = -168.0
+offset_right = 1376.0
+offset_bottom = -128.0
+rotation = 0.328295
+scale = Vector2(14.8625, 5.20862)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="bord"]
+scale = Vector2(1, 0.995496)
+polygon = PackedVector2Array(1240, 0, 1832, 0, 1384, -152.688, 1248, -257.158)
+
+[node name="Panel5" type="Panel" parent="bord"]
+offset_left = 1248.0
+offset_top = -256.0
+offset_right = 1288.0
+offset_bottom = -216.0
+rotation = 0.65166
+scale = Vector2(4.35685, 1.02905)
+
+[node name="plat2" type="StaticBody2D" parent="."]
+position = Vector2(211, -56)
+scale = Vector2(11.3837, 1.46224)
+
+[node name="CollisionShape2Dplat" type="CollisionShape2D" parent="plat2"]
+position = Vector2(6.11414, -9.71974)
+shape = SubResource("RectangleShape2D_yf7r8")
+
+[node name="Panel" type="Panel" parent="plat2"]
+offset_left = -3.86517
+offset_top = -19.8326
+offset_right = 36.1348
+offset_bottom = 20.1674
+scale = Vector2(0.49926, 0.502985)
+
+[node name="CollisionShape2Dplat2" type="CollisionShape2D" parent="plat2"]
+position = Vector2(-14.2658, -64.4304)
+shape = SubResource("RectangleShape2D_yf7r8")
+
+[node name="Panel2" type="Panel" parent="plat2"]
+offset_left = -24.2452
+offset_top = -74.5433
+offset_right = 15.7548
+offset_bottom = -34.5433
+scale = Vector2(0.49926, 0.502985)
+
+[node name="CollisionShape2Dplat3" type="CollisionShape2D" parent="plat2"]
+position = Vector2(13.9323, -112.986)
+shape = SubResource("RectangleShape2D_yf7r8")
+
+[node name="Panel3" type="Panel" parent="plat2"]
+offset_left = 3.95301
+offset_top = -123.099
+offset_right = 43.953
+offset_bottom = -83.099
+scale = Vector2(0.49926, 0.502985)
+
+[node name="CollisionShape2Dplat4" type="CollisionShape2D" parent="plat2"]
+position = Vector2(62.8619, -308.577)
+shape = SubResource("RectangleShape2D_yf7r8")
+
+[node name="Panel4" type="Panel" parent="plat2"]
+offset_left = 52.8825
+offset_top = -318.69
+offset_right = 92.8825
+offset_bottom = -278.69
+scale = Vector2(0.49926, 0.502985)
+
+[node name="CollisionShape2Dplat5" type="CollisionShape2D" parent="plat2"]
+position = Vector2(113.021, -432.36)
+shape = SubResource("RectangleShape2D_yf7r8")
+
+[node name="Panel5" type="Panel" parent="plat2"]
+offset_left = 103.042
+offset_top = -442.473
+offset_right = 143.042
+offset_bottom = -402.473
+scale = Vector2(0.49926, 0.502985)
+
+[node name="Montée" type="StaticBody2D" parent="."]
+position = Vector2(0, -3.8147e-06)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Montée"]
+position = Vector2(631.314, -576)
+rotation = 0.420108
+shape = SubResource("RectangleShape2D_sln4a")
+
+[node name="Panel" type="Panel" parent="Montée"]
+offset_left = 544.0
+offset_top = -626.0
+offset_right = 584.0
+offset_bottom = -586.0
+rotation = 0.420108
+scale = Vector2(5.02472, 0.4956)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Montée"]
+position = Vector2(376, -665)
+shape = SubResource("RectangleShape2D_sln4a")
+
+[node name="Panel2" type="Panel" parent="Montée"]
+offset_left = 275.0
+offset_top = -675.0
+offset_right = 315.0
+offset_bottom = -635.0
+scale = Vector2(5.02472, 0.4956)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Montée"]
+position = Vector2(36, -667)
+shape = SubResource("RectangleShape2D_sln4a")
+
+[node name="Panel4" type="Panel" parent="Montée"]
+offset_left = -65.0
+offset_top = -677.0
+offset_right = -25.0
+offset_bottom = -637.0
+scale = Vector2(5.02472, 0.4956)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Montée"]
+position = Vector2(4, -751)
+shape = SubResource("RectangleShape2D_sln4a")
+
+[node name="Panel5" type="Panel" parent="Montée"]
+offset_left = -97.0
+offset_top = -761.0
+offset_right = -57.0
+offset_bottom = -721.0
+scale = Vector2(5.02472, 0.4956)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Montée"]
+position = Vector2(-20, -836)
+shape = SubResource("RectangleShape2D_sln4a")
+
+[node name="Panel6" type="Panel" parent="Montée"]
+offset_left = -121.0
+offset_top = -846.0
+offset_right = -81.0
+offset_bottom = -806.0
+scale = Vector2(5.02472, 0.4956)
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Montée"]
+position = Vector2(266, -924)
+shape = SubResource("RectangleShape2D_sln4a")
+
+[node name="Panel7" type="Panel" parent="Montée"]
+offset_left = 165.0
+offset_top = -934.0
+offset_right = 205.0
+offset_bottom = -894.0
+scale = Vector2(5.02472, 0.4956)
+
+[node name="wall1" type="StaticBody2D" parent="."]
+
+[node name="Panel8" type="Panel" parent="wall1"]
+offset_left = 2496.0
+offset_top = -896.0
+offset_right = 2533.0
+offset_bottom = -856.0
+scale = Vector2(41.5355, 9.12053)
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="wall1"]
+position = Vector2(3263, -720)
+shape = SubResource("RectangleShape2D_rsbph")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall1"]
+position = Vector2(1322.5, -675.5)
+shape = SubResource("RectangleShape2D_h0cy1")
+
+[node name="Panel" type="Panel" parent="wall1"]
+offset_left = 1243.0
+offset_top = -368.0
+offset_right = 1283.0
+offset_bottom = -343.0
+scale = Vector2(3.97298, -24.7275)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wall1"]
+position = Vector2(752.772, -905)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_53ce0")
+
+[node name="Panel2" type="Panel" parent="wall1"]
+offset_left = 259.0
+offset_top = -985.0
+offset_right = 299.0
+offset_bottom = -945.0
+rotation = 1.5708
+scale = Vector2(3.97298, -24.7275)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="wall1"]
+position = Vector2(1839.5, -1324.9)
+shape = SubResource("RectangleShape2D_qmaaj")
+
+[node name="Panel3" type="Panel" parent="wall1"]
+offset_left = 1760.0
+offset_top = -827.0
+offset_right = 1800.0
+offset_bottom = -787.0
+scale = Vector2(3.97298, -24.7275)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="wall1"]
+position = Vector2(2972, -464)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_fsqtn")
+
+[node name="Panel4" type="Panel" parent="wall1"]
+offset_left = 1912.0
+offset_top = -544.0
+offset_right = 1952.0
+offset_bottom = -506.0
+rotation = 1.5708
+scale = Vector2(3.9949, -56.0336)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="wall1"]
+position = Vector2(2415.5, -1184.95)
+shape = SubResource("RectangleShape2D_8f7yo")
+
+[node name="Panel5" type="Panel" parent="wall1"]
+offset_left = 2336.0
+offset_top = -699.0
+offset_right = 2376.0
+offset_bottom = -660.0
+scale = Vector2(3.97298, -24.7275)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="wall1"]
+position = Vector2(2415.5, -1848)
+shape = SubResource("RectangleShape2D_bqdx5")
+
+[node name="Panel6" type="Panel" parent="wall1"]
+offset_left = 2336.0
+offset_top = -1728.0
+offset_right = 2376.0
+offset_bottom = -1688.0
+scale = Vector2(3.96544, -6.13042)
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="wall1"]
+position = Vector2(880, -1738)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_yi8h1")
+
+[node name="Panel7" type="Panel" parent="wall1"]
+offset_left = -3.05176e-05
+offset_top = -1818.0
+offset_right = 40.0
+offset_bottom = -1778.0
+rotation = 1.5708
+scale = Vector2(3.99491, -44.0722)
+
+[node name="montée2" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="montée2"]
+polygon = PackedVector2Array(1992, -544, 2304, -704, 2496, -704, 2496, -544)
+
+[node name="Panel" type="Panel" parent="montée2"]
+offset_left = 2304.0
+offset_top = -704.0
+offset_right = 2344.0
+offset_bottom = -664.0
+scale = Vector2(4.81508, 4.03324)
+
+[node name="Panel2" type="Panel" parent="montée2"]
+offset_left = 1992.0
+offset_top = -544.0
+offset_right = 2312.0
+offset_bottom = -504.0
+rotation = -0.477716
+scale = Vector2(1.10679, 4.5097)
+
+[node name="ascenpartie" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ascenpartie"]
+position = Vector2(2018.77, -844.013)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_kutwi")
+
+[node name="Panel" type="Panel" parent="ascenpartie"]
+offset_left = 1912.0
+offset_top = -856.0
+offset_right = 1952.0
+offset_bottom = -816.0
+scale = Vector2(5.40803, 0.606654)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ascenpartie"]
+position = Vector2(2400.77, -776.013)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_tw5dj")
+
+[node name="Panel2" type="Panel" parent="ascenpartie"]
+offset_left = 2318.0
+offset_top = -788.0
+offset_right = 2358.0
+offset_bottom = -748.0
+scale = Vector2(4.21559, 0.546727)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="ascenpartie"]
+position = Vector2(1866.77, -932.013)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_kutwi")
+
+[node name="Panel3" type="Panel" parent="ascenpartie"]
+offset_left = 1760.0
+offset_top = -944.0
+offset_right = 1800.0
+offset_bottom = -904.0
+scale = Vector2(5.40803, 0.606654)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="ascenpartie"]
+position = Vector2(2346.77, -980.013)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_kutwi")
+
+[node name="Panel4" type="Panel" parent="ascenpartie"]
+offset_left = 2240.0
+offset_top = -992.0
+offset_right = 2280.0
+offset_bottom = -952.0
+scale = Vector2(5.40803, 0.606654)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="ascenpartie"]
+position = Vector2(2018.77, -1044.01)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_kutwi")
+
+[node name="Panel5" type="Panel" parent="ascenpartie"]
+offset_left = 1912.0
+offset_top = -1056.0
+offset_right = 1952.0
+offset_bottom = -1016.0
+scale = Vector2(5.40803, 0.606654)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="ascenpartie"]
+position = Vector2(1866.77, -1132.01)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_kutwi")
+
+[node name="Panel6" type="Panel" parent="ascenpartie"]
+offset_left = 1760.0
+offset_top = -1144.0
+offset_right = 1800.0
+offset_bottom = -1104.0
+scale = Vector2(5.40803, 0.606654)
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="ascenpartie"]
+position = Vector2(2346.77, -1180.01)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_kutwi")
+
+[node name="Panel7" type="Panel" parent="ascenpartie"]
+offset_left = 2240.0
+offset_top = -1192.0
+offset_right = 2280.0
+offset_bottom = -1152.0
+scale = Vector2(5.40803, 0.606654)
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="ascenpartie"]
+position = Vector2(2018.77, -1244.01)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_kutwi")
+
+[node name="Panel8" type="Panel" parent="ascenpartie"]
+offset_left = 1912.0
+offset_top = -1256.0
+offset_right = 1952.0
+offset_bottom = -1216.0
+scale = Vector2(5.40803, 0.606654)
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="ascenpartie"]
+position = Vector2(1866.77, -1332.01)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_kutwi")
+
+[node name="Panel9" type="Panel" parent="ascenpartie"]
+offset_left = 1760.0
+offset_top = -1344.0
+offset_right = 1800.0
+offset_bottom = -1304.0
+scale = Vector2(5.40803, 0.606654)
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="ascenpartie"]
+position = Vector2(2346.77, -1380.01)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_kutwi")
+
+[node name="Panel10" type="Panel" parent="ascenpartie"]
+offset_left = 2240.0
+offset_top = -1392.0
+offset_right = 2280.0
+offset_bottom = -1352.0
+scale = Vector2(5.40803, 0.606654)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="ascenpartie"]
+position = Vector2(2306.77, -1532.01)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_kutwi")
+
+[node name="Panel11" type="Panel" parent="ascenpartie"]
+offset_left = 2200.0
+offset_top = -1544.0
+offset_right = 2240.0
+offset_bottom = -1504.0
+scale = Vector2(5.40803, 0.606654)
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="ascenpartie"]
+position = Vector2(2018.77, -1468.01)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_kutwi")
+
+[node name="Panel12" type="Panel" parent="ascenpartie"]
+offset_left = 1912.0
+offset_top = -1480.0
+offset_right = 1952.0
+offset_bottom = -1440.0
+scale = Vector2(5.40803, 0.606654)
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="ascenpartie"]
+position = Vector2(1938.77, -1588.01)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_kutwi")
+
+[node name="Panel13" type="Panel" parent="ascenpartie"]
+offset_left = 1832.0
+offset_top = -1600.0
+offset_right = 1872.0
+offset_bottom = -1560.0
+scale = Vector2(5.40803, 0.606654)
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="ascenpartie"]
+position = Vector2(1874.77, -1668.01)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_kutwi")
+
+[node name="Panel14" type="Panel" parent="ascenpartie"]
+offset_left = 1768.0
+offset_top = -1680.0
+offset_right = 1808.0
+offset_bottom = -1640.0
+scale = Vector2(5.40803, 0.606654)
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="ascenpartie"]
+position = Vector2(2389.38, -1649.99)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_kutwi")
+
+[node name="Panel15" type="Panel" parent="ascenpartie"]
+offset_left = 2280.0
+offset_top = -1664.0
+offset_right = 2320.0
+offset_bottom = -1624.0
+scale = Vector2(5.40803, 0.606654)
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="ascenpartie"]
+position = Vector2(2234.77, -1748.01)
+scale = Vector2(1.01814, 0.805059)
+shape = SubResource("RectangleShape2D_kutwi")
+
+[node name="Panel16" type="Panel" parent="ascenpartie"]
+offset_left = 2128.0
+offset_top = -1760.0
+offset_right = 2168.0
+offset_bottom = -1720.0
+scale = Vector2(5.40803, 0.606654)
+
+[node name="lastpart" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lastpart"]
+shape = SubResource("RectangleShape2D_v7n1f")
+
+[node name="Panel" type="Panel" parent="lastpart"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="lastpart"]
+offset_left = 2632.0
+offset_top = -936.0
+offset_right = 2852.0
+offset_bottom = -913.0
+text = ">>>>>>"
+
+[node name="Label2" type="Label" parent="lastpart"]
+offset_left = 2888.0
+offset_top = -936.0
+offset_right = 3108.0
+offset_bottom = -913.0
+text = ">>>>>>"
+
+[node name="Label3" type="Label" parent="lastpart"]
+offset_left = 3144.0
+offset_top = -936.0
+offset_right = 3364.0
+offset_bottom = -913.0
+text = ">>>>>>"
+
+[node name="Label4" type="Label" parent="lastpart"]
+offset_left = 3400.0
+offset_top = -936.0
+offset_right = 3620.0
+offset_bottom = -913.0
+text = ">>>>>>"
+
+[node name="Label5" type="Label" parent="lastpart"]
+offset_left = 3656.0
+offset_top = -936.0
+offset_right = 3876.0
+offset_bottom = -913.0
+text = ">>>>>>"
+
+[node name="Label6" type="Label" parent="lastpart"]
+offset_left = 3912.0
+offset_top = -936.0
+offset_right = 4132.0
+offset_bottom = -913.0
+text = ">>>>>>"
+
+[node name="Label7" type="Label" parent="lastpart"]
+offset_left = 4104.0
+offset_top = -914.0
+offset_right = 4176.0
+offset_bottom = -891.0
+rotation = 1.57142
+text = ">>"
