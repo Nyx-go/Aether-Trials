@@ -1,18 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://cyfh0t4cp21kn"]
+[gd_scene load_steps=3 format=3 uid="uid://c4egrom4kvdjc"]
 
-[ext_resource type="Script" path="res://scripts/menuPause.gd" id="1_1rllf"]
+[ext_resource type="Script" path="res://scripts/menus/menuPause.gd" id="1_4k7nt"]
 [ext_resource type="FontFile" uid="uid://dg2bonuafu8ss" path="res://fonts/Pixeltype.ttf" id="2_efdyg"]
 
 [node name="MarginContainer" type="MarginContainer"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -124.0
-offset_top = -98.0
-offset_right = 124.0
-offset_bottom = 98.0
+offset_left = -136.0
+offset_top = -144.0
+offset_right = 136.0
+offset_bottom = 144.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -20,7 +21,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 14
-script = ExtResource("1_1rllf")
+script = ExtResource("1_4k7nt")
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
