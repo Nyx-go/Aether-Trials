@@ -205,7 +205,7 @@ scale = Vector2(14.8625, 5.20862)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="bord"]
 scale = Vector2(1, 0.995496)
-polygon = PackedVector2Array(1240, 0, 1832, 0, 1384, -152.688, 1248, -257.158)
+polygon = PackedVector2Array(1240, 0, 1832, 0, 1384, -152.688, 1248, -257.158, 1244.92, -158.167)
 
 [node name="Panel5" type="Panel" parent="bord"]
 offset_left = 1248.0
