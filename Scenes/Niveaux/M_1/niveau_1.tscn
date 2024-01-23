@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dmbjhpxwvflr2"]
+[gd_scene load_steps=25 format=3 uid="uid://csuh35v5dndoe"]
 
 [ext_resource type="Texture2D" uid="uid://gct8logf0kyr" path="res://Sprite/Monde_1/tiles-sheet-hell-1.png" id="1_1gppd"]
 [ext_resource type="PackedScene" uid="uid://duo22ynnygtpt" path="res://Player/PlayerBase/Player.tscn" id="2_x8mmh"]
