@@ -245,8 +245,8 @@ polygon = PackedVector2Array(1240, 0, 1832, 0, 1384, -152.688, 1248, -257.158)
 [node name="Panel5" type="Panel" parent="bord"]
 offset_left = 1248.0
 offset_top = -256.0
-offset_right = 1288.0
-offset_bottom = -216.0
+offset_right = 1289.0
+offset_bottom = -206.0
 rotation = 0.65166
 scale = Vector2(4.35685, 1.02905)
 
@@ -541,22 +541,31 @@ scale = Vector2(3.99491, -44.0722)
 [node name="montée2" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="montée2"]
-polygon = PackedVector2Array(1992, -544, 2304, -704, 2496, -704, 2496, -544)
+position = Vector2(-72, 0)
+polygon = PackedVector2Array(1992, -544, 2216, -608, 2336, -704, 2496, -704, 2496, -544)
 
 [node name="Panel" type="Panel" parent="montée2"]
-offset_left = 2304.0
+offset_left = 2264.0
 offset_top = -704.0
-offset_right = 2344.0
+offset_right = 2312.0
 offset_bottom = -664.0
 scale = Vector2(4.81508, 4.03324)
 
 [node name="Panel2" type="Panel" parent="montée2"]
-offset_left = 1992.0
-offset_top = -544.0
-offset_right = 2312.0
-offset_bottom = -504.0
-rotation = -0.477716
+offset_left = 1910.0
+offset_top = -543.0
+offset_right = 2313.0
+offset_bottom = -508.0
+rotation = -0.271654
 scale = Vector2(1.10679, 4.5097)
+
+[node name="Panel3" type="Panel" parent="montée2"]
+offset_left = 2144.0
+offset_top = -608.0
+offset_right = 2184.0
+offset_bottom = -568.0
+rotation = -0.68202
+scale = Vector2(3.87037, 1.48715)
 
 [node name="ascenpartie" type="StaticBody2D" parent="."]
 
@@ -1410,3 +1419,16 @@ offset_top = -1872.0
 offset_right = 4368.0
 offset_bottom = -1812.0
 scale = Vector2(0.636268, -6.13042)
+
+[node name="dash" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dash"]
+position = Vector2(3432, -2232)
+shape = SubResource("RectangleShape2D_t5km5")
+
+[node name="Panel" type="Panel" parent="dash"]
+offset_left = 2536.0
+offset_top = -2240.0
+offset_right = 3580.0
+offset_bottom = -2224.0
+scale = Vector2(1.71666, 1)
