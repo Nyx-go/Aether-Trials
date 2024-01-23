@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvjpk6y6gmm16"]
 
-[ext_resource type="Script" path="res://Player/Element Feu/Player_Fire.gd" id="1_10bi6"]
+[ext_resource type="Script" path="res://Player/element_Feu/Player_Fire.gd" id="1_10bi6"]
 [ext_resource type="Texture2D" uid="uid://caju082gas07d" path="res://Sprite/Player_Element/player_fire.png" id="1_oox23"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3ag4w"]

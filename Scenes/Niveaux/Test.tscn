@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=3 uid="uid://bld4msu1n5dpa"]
 
-[ext_resource type="Texture2D" uid="uid://yernr8bk7bnf" path="res://Sprite/Monde 1/tiles-sheet-hell-1.png" id="1_uf7fi"]
-[ext_resource type="PackedScene" uid="uid://rj3rxq16bmd4" path="res://Player/Element air/Player_air.tscn" id="2_03j0u"]
+[ext_resource type="Texture2D" uid="uid://yernr8bk7bnf" path="res://Sprite/Monde_1/tiles-sheet-hell-1.png" id="1_uf7fi"]
+[ext_resource type="PackedScene" uid="uid://rj3rxq16bmd4" path="res://Player/element_Air/Player_air.tscn" id="2_03j0u"]
 [ext_resource type="PackedScene" uid="uid://duo22ynnygtpt" path="res://Player/PlayerBase/Player.tscn" id="2_ewk6p"]
 [ext_resource type="Script" path="res://Player/Player.gd" id="2_p4uqi"]
-[ext_resource type="PackedScene" uid="uid://cwm82ee1gut1m" path="res://Player/Element eau/Player_Water.tscn" id="3_uh8xc"]
-[ext_resource type="PackedScene" uid="uid://dvjpk6y6gmm16" path="res://Player/Element Feu/Player_Fire.tscn" id="4_20sll"]
+[ext_resource type="PackedScene" uid="uid://cwm82ee1gut1m" path="res://Player/element_Eau/Player_Water.tscn" id="3_uh8xc"]
+[ext_resource type="PackedScene" uid="uid://dvjpk6y6gmm16" path="res://Player/element_Feu/Player_Fire.tscn" id="4_20sll"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yhqy1"]
 texture = ExtResource("1_uf7fi")

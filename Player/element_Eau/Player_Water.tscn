@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cwm82ee1gut1m"]
 
-[ext_resource type="Script" path="res://Player/Element eau/Player_Water.gd" id="1_1srux"]
+[ext_resource type="Script" path="res://Player/element_Eau/Player_Water.gd" id="1_1srux"]
 [ext_resource type="Texture2D" uid="uid://bd3h0d7mue0e2" path="res://Sprite/Player_Element/player_water.png" id="2_kx5nu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3ayl8"]
