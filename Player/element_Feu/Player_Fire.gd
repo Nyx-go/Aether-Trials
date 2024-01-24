@@ -22,7 +22,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") && is_on_floor() && !Donnee.menu_visible:
 		velocity.y = JUMP_VELOCITY
 	
-	if Input.is_action_just_pressed("ability"):
+	if Input.is_action_just_pressed("ability") && !Donnee.menu_visible:
 		shoot()
 
 	# Get the input direction and handle the movement/deceleration.
