@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b308r6krtrq0c"
-path="res://.godot/imported/personnage.png-1b0ac7194f76a986b0f8154f59679490.ctex"
+uid="uid://cgmbmbkamjwtt"
+path="res://.godot/imported/player_terre.png-348d284f5f24ac86188aa509684001e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/Players/personnage.png"
-dest_files=["res://.godot/imported/personnage.png-1b0ac7194f76a986b0f8154f59679490.ctex"]
+source_file="res://Sprite/Player_Element/player_terre.png"
+dest_files=["res://.godot/imported/player_terre.png-348d284f5f24ac86188aa509684001e4.ctex"]
 
 [params]
 
