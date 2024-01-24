@@ -16,7 +16,9 @@ animations = [{
 }]
 
 [node name="Player_Base" type="CharacterBody2D"]
+position = Vector2(9, -50)
 script = ExtResource("1_516j8")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -27,7 +29,7 @@ animation = &"base"
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(7.99998, -7.99998)
 zoom = Vector2(2, 2)
-limit_left = -10000
+limit_left = -1904
 limit_top = -10000
 limit_bottom = 1090
 
