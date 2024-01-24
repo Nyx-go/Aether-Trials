@@ -31,7 +31,8 @@ position = Vector2(7.99998, -7.99998)
 zoom = Vector2(2, 2)
 limit_left = -1904
 limit_top = -10000
-limit_bottom = 1090
+limit_right = 4352
+limit_bottom = 64
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(3.2, 1.3)
