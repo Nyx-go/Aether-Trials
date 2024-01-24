@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://duo22ynnygtpt"]
+[gd_scene load_steps=5 format=3 uid="uid://duo22ynnygtpt"]
 
 [ext_resource type="Script" path="res://Player/PlayerBase/Player.gd" id="1_516j8"]
 [ext_resource type="Texture2D" uid="uid://da6e47yg84af7" path="res://Sprite/player.png" id="2_yh3aq"]
+[ext_resource type="PackedScene" uid="uid://c4egrom4kvdjc" path="res://scenes/menu/menuPause.tscn" id="3_6lmat"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s00s1"]
 animations = [{
@@ -33,3 +34,5 @@ limit_bottom = 1090
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(3.2, 1.3)
 polygon = PackedVector2Array(-11, 31, -13, 24, -13, 13, -11, -7, -11, -24, -9, -28, -1, -30, 7, -28, 9, -23, 3, -13, 9, -7, 9, 8, 9, 12, 11, 19, 11, 23, 9, 31, 6, 31, 3, 31, 0, 31, -4, 31, -8, 31)
+
+[node name="MarginContainer" parent="." instance=ExtResource("3_6lmat")]
