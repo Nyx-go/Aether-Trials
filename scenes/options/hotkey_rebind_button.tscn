@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b7kk47h5wofxy"]
 
 [ext_resource type="Script" path="res://scenes/options/hotkey_rebind_button.gd" id="1_h5a4p"]
-[ext_resource type="FontFile" uid="uid://c4wkgsdp6fcjh" path="res://fonts/Pixeltype.ttf" id="2_3ts75"]
+[ext_resource type="FontFile" uid="uid://clr7cwm1ijv54" path="res://fonts/Pixeltype.ttf" id="2_3ts75"]
 
 [node name="hotkey_rebind_button" type="Control" groups=["hotkey_button"]]
 layout_mode = 3
@@ -11,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_h5a4p")
+action_name = null
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
