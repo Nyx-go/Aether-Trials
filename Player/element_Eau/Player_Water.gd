@@ -6,7 +6,7 @@ const SPEED = 300.0
 
 var animationInfiltration = false
 
-const infiltrationlengh = 300	
+const infiltrationlengh = 50	
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.

@@ -45,7 +45,6 @@ size = Vector2(29, 8)
 
 [node name="Player_water" type="CharacterBody2D"]
 script = ExtResource("1_1srux")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3ayl8")
@@ -54,12 +53,14 @@ autoplay = "eau"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
-limit_left = -50
-limit_top = -50
-limit_bottom = 1090
+limit_left = -1904
+limit_top = -10000
+limit_right = 4352
+limit_bottom = 64
+metadata/_edit_group_ = true
+
+[node name="MarginContainer" parent="Camera2D" instance=ExtResource("3_kc0j0")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 12)
 shape = SubResource("RectangleShape2D_xqef2")
-
-[node name="MarginContainer" parent="." instance=ExtResource("3_kc0j0")]
