@@ -1,41 +1,65 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvjpk6y6gmm16"]
+[gd_scene load_steps=9 format=3 uid="uid://dvjpk6y6gmm16"]
 
 [ext_resource type="Script" path="res://Player/element_Feu/Player_Fire.gd" id="1_10bi6"]
-[ext_resource type="Texture2D" uid="uid://kgcbvffq1r0h" path="res://Sprite/Players/personnage-feu.png" id="2_ul7jg"]
+[ext_resource type="Texture2D" uid="uid://xal3ljptu7x6" path="res://Sprite/Players/personnage-feu.png" id="2_5f03r"]
+[ext_resource type="PackedScene" uid="uid://c4egrom4kvdjc" path="res://Scenes/menu/MenuPause.tscn" id="3_3v3xl"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vwrvl"]
-atlas = ExtResource("2_ul7jg")
-region = Rect2(160, 0, 32, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2txf"]
+atlas = ExtResource("2_5f03r")
+region = Rect2(0, 64, 32, 64)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_samee"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kjnw"]
+atlas = ExtResource("2_5f03r")
+region = Rect2(32, 64, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qekfn"]
+atlas = ExtResource("2_5f03r")
+region = Rect2(64, 64, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0t8n"]
+atlas = ExtResource("2_5f03r")
+region = Rect2(96, 64, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ag4w"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vwrvl")
+"texture": SubResource("AtlasTexture_s2txf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kjnw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qekfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0t8n")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ekgg5"]
-size = Vector2(31, 63)
-
 [node name="Player_fire" type="CharacterBody2D"]
+texture_filter = 1
 script = ExtResource("1_10bi6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_samee")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -8.5)
-shape = SubResource("RectangleShape2D_ekgg5")
+sprite_frames = SubResource("SpriteFrames_3ag4w")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.776058
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
-limit_left = -1904
-limit_right = 4352
-limit_bottom = 64
+limit_left = -10000
+limit_top = -10000
+limit_bottom = 1090
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(10, 31, -12, 31, -10, 3, -5, -13, -8, -20, -9, -32, 10, -31)
+
+[node name="MarginContainer" parent="." instance=ExtResource("3_3v3xl")]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(15, 0)

@@ -1,13 +1,13 @@
-[gd_scene load_steps=37 format=3 uid="uid://csuh35v5dndoe"]
+[gd_scene load_steps=40 format=3 uid="uid://dmbjhpxwvflr2"]
 
 [ext_resource type="Script" path="res://scenes/Niveaux/M_1/niveau_1.gd" id="1_154kv"]
 [ext_resource type="Texture2D" uid="uid://gct8logf0kyr" path="res://Sprite/Monde_1/tiles-sheet-hell-1.png" id="1_i4446"]
-[ext_resource type="PackedScene" uid="uid://duo22ynnygtpt" path="res://Player/PlayerBase/Player.tscn" id="2_34e6j"]
 [ext_resource type="Texture2D" uid="uid://b0dg0aslksdfw" path="res://Sprite/Monde_1/tile-sheet-terre.png" id="2_xa8hf"]
 [ext_resource type="Texture2D" uid="uid://v2pi1adtv833" path="res://Sprite/Monde_1/ciel.png" id="3_j0r4b"]
 [ext_resource type="Script" path="res://scenes/Niveaux/M_1/Spawner.gd" id="3_okaee"]
 [ext_resource type="PackedScene" uid="uid://dvjpk6y6gmm16" path="res://Player/element_Feu/Player_Fire.tscn" id="5_aj40h"]
 [ext_resource type="PackedScene" uid="uid://rj3rxq16bmd4" path="res://Player/element_Air/Player_air.tscn" id="6_d1hf1"]
+[ext_resource type="PackedScene" uid="uid://duo22ynnygtpt" path="res://Player/PlayerBase/Player.tscn" id="6_pk86f"]
 [ext_resource type="PackedScene" uid="uid://cwm82ee1gut1m" path="res://Player/element_Eau/Player_Water.tscn" id="7_rrbk8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a70t4"]
@@ -355,6 +355,9 @@ size = Vector2(32, 72)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nsuke"]
 size = Vector2(16, 209)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnayj"]
+size = Vector2(14, 208)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vsghq"]
 size = Vector2(1163.96, 67.4631)
 
@@ -406,6 +409,12 @@ size = Vector2(16, 48)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tft4w"]
 size = Vector2(16, 80)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30d8t"]
+size = Vector2(14, 288)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tvrys"]
+size = Vector2(10, 34)
+
 [node name="Niveau1" type="Node2D"]
 script = ExtResource("1_154kv")
 
@@ -421,8 +430,7 @@ position = Vector2(498, -69)
 [node name="Player_water" parent="Spawner" instance=ExtResource("7_rrbk8")]
 position = Vector2(661, -19)
 
-[node name="Player_Base" parent="Spawner" instance=ExtResource("2_34e6j")]
-position = Vector2(567, -35)
+[node name="Player_Base" parent="Spawner" instance=ExtResource("6_pk86f")]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_bcht8")
@@ -480,6 +488,19 @@ polygon = PackedVector2Array(-717, 435, -653, 435, -653, 563, -717, 563)
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Begin plat"]
 position = Vector2(-997, 459.5)
 shape = SubResource("RectangleShape2D_nsuke")
+
+[node name="MurDestructible" type="StaticBody2D" parent="Begin plat" groups=["Destructible"]]
+position = Vector2(-100, 0)
+
+[node name="Panel" type="Panel" parent="Begin plat/MurDestructible"]
+offset_left = -1170.0
+offset_top = 355.0
+offset_right = -1156.0
+offset_bottom = 562.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Begin plat/MurDestructible"]
+position = Vector2(-1163, 459)
+shape = SubResource("RectangleShape2D_gnayj")
 
 [node name="Wall" type="StaticBody2D" parent="."]
 position = Vector2(141, -563)
@@ -1086,3 +1107,27 @@ offset_right = -592.0
 offset_bottom = -129.0
 text = "AIR !
 "
+
+[node name="MurDestructible" type="StaticBody2D" parent="." groups=["Destructible"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MurDestructible"]
+position = Vector2(1911, -688)
+shape = SubResource("RectangleShape2D_30d8t")
+
+[node name="Panel" type="Panel" parent="MurDestructible"]
+offset_left = 1904.0
+offset_top = -832.0
+offset_right = 1918.0
+offset_bottom = -544.0
+
+[node name="MurDestructible1" type="StaticBody2D" parent="." groups=["Destructible"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MurDestructible1"]
+position = Vector2(165, -929)
+shape = SubResource("RectangleShape2D_tvrys")
+
+[node name="Panel" type="Panel" parent="MurDestructible1"]
+offset_left = 160.0
+offset_top = -946.0
+offset_right = 170.0
+offset_bottom = -912.0
