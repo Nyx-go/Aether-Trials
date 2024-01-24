@@ -1,21 +1,47 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwm82ee1gut1m"]
+[gd_scene load_steps=10 format=3 uid="uid://cwm82ee1gut1m"]
 
 [ext_resource type="Script" path="res://Player/element_Eau/Player_Water.gd" id="1_1srux"]
-[ext_resource type="Texture2D" uid="uid://bd3h0d7mue0e2" path="res://Sprite/Player_Element/player_water.png" id="2_kx5nu"]
+[ext_resource type="Texture2D" uid="uid://d4bkwpo3yhi1p" path="res://Sprite/Players/personnage-eau.png" id="2_52wu3"]
+[ext_resource type="PackedScene" path="res://Scenes/menu/MenuPause.tscn" id="3_kc0j0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbva6"]
+atlas = ExtResource("2_52wu3")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gflq5"]
+atlas = ExtResource("2_52wu3")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5q82"]
+atlas = ExtResource("2_52wu3")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrwaj"]
+atlas = ExtResource("2_52wu3")
+region = Rect2(96, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3ayl8"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_kx5nu")
+"texture": SubResource("AtlasTexture_hbva6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gflq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5q82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrwaj")
 }],
 "loop": true,
-"name": &"player_water",
+"name": &"eau",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xqef2"]
-size = Vector2(32, 5)
+size = Vector2(29, 8)
 
 [node name="Player_water" type="CharacterBody2D"]
 script = ExtResource("1_1srux")
@@ -23,14 +49,17 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3ayl8")
-animation = &"player_water"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 13.5)
-shape = SubResource("RectangleShape2D_xqef2")
+animation = &"eau"
+autoplay = "eau"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 limit_left = -50
 limit_top = -50
 limit_bottom = 1090
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 12)
+shape = SubResource("RectangleShape2D_xqef2")
+
+[node name="MarginContainer" parent="." instance=ExtResource("3_kc0j0")]
