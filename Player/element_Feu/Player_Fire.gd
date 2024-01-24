@@ -40,6 +40,7 @@ func _physics_process(delta):
 
 
 func shoot():
+	var direction = Input.get_axis("move_left", "move_right")
 	var f = fireball_path.instantiate()
 	get_parent().add_child(f)
 	f.position = $Marker2D.global_position
