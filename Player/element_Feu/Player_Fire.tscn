@@ -1,13 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvjpk6y6gmm16"]
+[gd_scene load_steps=6 format=3 uid="uid://dvjpk6y6gmm16"]
 
 [ext_resource type="Script" path="res://Player/element_Feu/Player_Fire.gd" id="1_10bi6"]
-[ext_resource type="Texture2D" uid="uid://caju082gas07d" path="res://Sprite/Player_Element/player_fire.png" id="1_oox23"]
+[ext_resource type="Texture2D" uid="uid://kgcbvffq1r0h" path="res://Sprite/Players/personnage-feu.png" id="2_ul7jg"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_3ag4w"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwrvl"]
+atlas = ExtResource("2_ul7jg")
+region = Rect2(160, 0, 32, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_samee"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_oox23")
+"texture": SubResource("AtlasTexture_vwrvl")
 }],
 "loop": true,
 "name": &"default",
@@ -15,19 +19,23 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ekgg5"]
-size = Vector2(31, 28)
+size = Vector2(31, 63)
 
 [node name="Player_fire" type="CharacterBody2D"]
 script = ExtResource("1_10bi6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_3ag4w")
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_samee")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 2)
+position = Vector2(0.5, -8.5)
 shape = SubResource("RectangleShape2D_ekgg5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 limit_left = -1904
 limit_right = 4352
 limit_bottom = 64
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
