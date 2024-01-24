@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4bkwpo3yhi1p"
-path="res://.godot/imported/personnage-eau.png-a128f6730530943479f2ac7353fcdf71.ctex"
+uid="uid://v2pi1adtv833"
+path="res://.godot/imported/ciel.png-6e86c8e5169fcdc95b7262cc996a2c6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/Players/personnage-eau.png"
-dest_files=["res://.godot/imported/personnage-eau.png-a128f6730530943479f2ac7353fcdf71.ctex"]
+source_file="res://Sprite/Monde_1/ciel.png"
+dest_files=["res://.godot/imported/ciel.png-6e86c8e5169fcdc95b7262cc996a2c6d.ctex"]
 
 [params]
 
