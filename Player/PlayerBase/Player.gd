@@ -28,6 +28,7 @@ func _physics_process(delta):
 	var direction = Input.get_axis("move_left", "move_right")
 	if direction && !Donnee.menu_visible:
 		velocity.x = direction * SPEED
+		
 	else:
 		if !direction && !Donnee.menu_visible :
 			velocity.x = move_toward(velocity.x, 0, SPEED)

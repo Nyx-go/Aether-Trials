@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://6amnw1qqemu"]
 
-[ext_resource type="PackedScene" uid="uid://bom35apd2ryjh" path="res://scenes/menu/menuPause.tscn" id="1_7byu0"]
+[ext_resource type="PackedScene" uid="uid://c4egrom4kvdjc" path="res://scenes/menu/menuPause.tscn" id="1_7byu0"]
 
 [node name="MarginContainer" type="MarginContainer"]
 anchors_preset = 8

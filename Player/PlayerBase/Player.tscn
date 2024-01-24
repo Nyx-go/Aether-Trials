@@ -1,17 +1,104 @@
-[gd_scene load_steps=5 format=3 uid="uid://duo22ynnygtpt"]
+[gd_scene load_steps=17 format=3 uid="uid://duo22ynnygtpt"]
 
 [ext_resource type="Script" path="res://Player/PlayerBase/Player.gd" id="1_516j8"]
-[ext_resource type="Texture2D" uid="uid://da6e47yg84af7" path="res://Sprite/player.png" id="2_yh3aq"]
-[ext_resource type="PackedScene" uid="uid://c4egrom4kvdjc" path="res://scenes/menu/menuPause.tscn" id="3_6lmat"]
+[ext_resource type="Texture2D" uid="uid://da6e47yg84af7" path="res://Sprite/Players/player.png" id="2_rq6k5"]
+[ext_resource type="PackedScene" uid="uid://c4egrom4kvdjc" path="res://Scenes/menu/MenuPause.tscn" id="3_6lmat"]
+[ext_resource type="Texture2D" uid="uid://xal3ljptu7x6" path="res://Sprite/Players/personnage-feu.png" id="3_itrgs"]
+[ext_resource type="Texture2D" uid="uid://b308r6krtrq0c" path="res://Sprite/Players/personnage.png" id="4_hvk6c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajxrt"]
+atlas = ExtResource("3_itrgs")
+region = Rect2(0, 64, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qikg6"]
+atlas = ExtResource("3_itrgs")
+region = Rect2(32, 64, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sox6t"]
+atlas = ExtResource("3_itrgs")
+region = Rect2(64, 64, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmfwp"]
+atlas = ExtResource("3_itrgs")
+region = Rect2(96, 64, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xb12n"]
+atlas = ExtResource("3_itrgs")
+region = Rect2(192, 128, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f047y"]
+atlas = ExtResource("3_itrgs")
+region = Rect2(224, 128, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3upst"]
+atlas = ExtResource("3_itrgs")
+region = Rect2(256, 128, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdeuy"]
+atlas = ExtResource("3_itrgs")
+region = Rect2(288, 128, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05nv5"]
+atlas = ExtResource("4_hvk6c")
+region = Rect2(0, 64, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rvcr"]
+atlas = ExtResource("4_hvk6c")
+region = Rect2(32, 64, 32, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s00s1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_yh3aq")
+"texture": ExtResource("2_rq6k5")
 }],
 "loop": true,
 "name": &"base",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajxrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qikg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sox6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmfwp")
+}],
+"loop": true,
+"name": &"personnage-feu-idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xb12n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f047y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3upst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdeuy")
+}],
+"loop": true,
+"name": &"personnage-feu-run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05nv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rvcr")
+}],
+"loop": true,
+"name": &"personnage-idle",
 "speed": 5.0
 }]
 
@@ -20,9 +107,10 @@ script = ExtResource("1_516j8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(145.2, 130.3)
+position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_s00s1")
-animation = &"base"
+animation = &"personnage-idle"
+autoplay = "personnage-idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(7.99998, -7.99998)
