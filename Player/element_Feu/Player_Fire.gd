@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 
 @export var SPEED = 300.0
-# @export var Fireball : PackedScene
 const JUMP_VELOCITY = -400.0
 const fireball_path = preload("res://Player/element_Feu/Fireball.tscn")
 
@@ -40,7 +39,6 @@ func _physics_process(delta):
 
 
 func shoot():
-	var direction = Input.get_axis("move_left", "move_right")
 	var f = fireball_path.instantiate()
 	get_parent().add_child(f)
 	f.position = $Marker2D.global_position

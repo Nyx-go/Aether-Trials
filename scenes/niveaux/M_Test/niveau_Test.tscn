@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://csuh35v5dndoe"]
+[gd_scene load_steps=12 format=3 uid="uid://csuh35v5dndoe"]
 
 [ext_resource type="Texture2D" uid="uid://gct8logf0kyr" path="res://Sprite/Monde_1/tiles-sheet-hell-1.png" id="1_ae0la"]
 [ext_resource type="PackedScene" uid="uid://duo22ynnygtpt" path="res://Player/PlayerBase/Player.tscn" id="2_5p85a"]
@@ -92,6 +92,24 @@ size = Vector2(31.7896, 48.7885)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owik0"]
 size = Vector2(32, 1040)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_47cdp"]
+atlas = ExtResource("1_ae0la")
+region = Rect2(96, 0, 32, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fyc0r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47cdp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbluu"]
+size = Vector2(15, 123)
+
 [node name="Niveau 1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -132,3 +150,16 @@ shape = SubResource("RectangleShape2D_owik0")
 
 [node name="Player_fire" parent="." instance=ExtResource("2_35iqv")]
 position = Vector2(467, 942)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." groups=["Destructible"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D4"]
+position = Vector2(752, 930)
+scale = Vector2(0.5, 3.54286)
+sprite_frames = SubResource("SpriteFrames_fyc0r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(752, 930)
+shape = SubResource("RectangleShape2D_wbluu")
