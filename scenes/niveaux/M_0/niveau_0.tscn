@@ -1,39 +1,38 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1exko5plsf84"]
 
-[ext_resource type="PackedScene" uid="uid://duo22ynnygtpt" path="res://Player/PlayerBase/Player.tscn" id="1_jy666"]
+[ext_resource type="PackedScene" uid="uid://cwm82ee1gut1m" path="res://Player/element_Eau/Player_Water.tscn" id="1_ismt6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ml6fc"]
-size = Vector2(184, 82)
+size = Vector2(184, 99)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cnkpm"]
-size = Vector2(1726, 115)
+size = Vector2(1726, 111)
 
 [node name="niveau_0" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_jy666")]
-position = Vector2(525, 341)
-SPEED = null
+[node name="Player_water" parent="." instance=ExtResource("1_ismt6")]
+position = Vector2(192, -128)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(276, 693)
+position = Vector2(16, -88)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1020, -52)
+position = Vector2(1020, -43.5)
 shape = SubResource("RectangleShape2D_ml6fc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(853, 47.5)
+position = Vector2(853, 45.5)
 shape = SubResource("RectangleShape2D_cnkpm")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 268.0
-offset_top = 686.0
-offset_right = 1990.0
-offset_bottom = 796.0
+offset_left = 8.0
+offset_top = -96.0
+offset_right = 1730.0
+offset_bottom = 14.0
 
 [node name="Panel2" type="Panel" parent="."]
-offset_left = 1204.0
-offset_top = 600.0
-offset_right = 1388.0
-offset_bottom = 682.0
+offset_left = 944.0
+offset_top = -184.0
+offset_right = 1128.0
+offset_bottom = -97.0
