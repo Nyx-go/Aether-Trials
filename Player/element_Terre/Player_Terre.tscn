@@ -46,7 +46,7 @@ size = Vector2(28.7934, 168.801)
 scale = Vector2(0.0243748, 0.0110891)
 script = ExtResource("1_v38bm")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="player" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.882021, 1.97824)
 sprite_frames = SubResource("SpriteFrames_rkmhn")
 

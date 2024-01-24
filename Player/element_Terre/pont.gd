@@ -14,11 +14,7 @@ func _physics_process(delta):
 	
 func start_pont(position_pont_x,position_pont_y):
 	afficher_pont(position_pont_x,position_pont_y)
-	couldown_pont(3)
-	
-func couldown_pont(dur):
-	couldown.wait_time = dur
-	couldown.start()
+
 
 
 func couldown_started():
