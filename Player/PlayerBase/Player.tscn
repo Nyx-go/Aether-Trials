@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Player/PlayerBase/Player.gd" id="1_516j8"]
 [ext_resource type="Texture2D" uid="uid://da6e47yg84af7" path="res://Sprite/player.png" id="2_yh3aq"]
-[ext_resource type="PackedScene" uid="uid://c4egrom4kvdjc" path="res://scenes/menu/menuPause.tscn" id="3_6lmat"]
+[ext_resource type="PackedScene" uid="uid://c4egrom4kvdjc" path="res://scenes/menu/MenuPause.tscn" id="3_6lmat"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s00s1"]
 animations = [{
