@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/menu/menuOption.gd" id="1_3dv82"]
 [ext_resource type="FontFile" uid="uid://clr7cwm1ijv54" path="res://fonts/Pixeltype.ttf" id="2_2lvp0"]
 [ext_resource type="PackedScene" uid="uid://b7kk47h5wofxy" path="res://scenes/options/hotkey_rebind_button.tscn" id="3_756cf"]
-[ext_resource type="Texture2D" uid="uid://bdsk3gfwo5m15" path="res://Sprite/fond/Menu2.png" id="4_8tgkp"]
+[ext_resource type="Texture2D" path="res://Sprite/fond/Menu2.png" id="4_8tgkp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_by4de"]
 

@@ -4,9 +4,9 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 
-const animationInfiltration = false
+var animationInfiltration = false
 
-const infiltrationlengh = 30
+const infiltrationlengh = 300	
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
