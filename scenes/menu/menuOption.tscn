@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://6sx4d7snmh5f"]
+[gd_scene load_steps=6 format=3 uid="uid://58y5toegsmg4"]
 
 [ext_resource type="Script" path="res://scenes/menu/menuOption.gd" id="1_3dv82"]
 [ext_resource type="FontFile" uid="uid://clr7cwm1ijv54" path="res://fonts/Pixeltype.ttf" id="2_2lvp0"]
 [ext_resource type="PackedScene" uid="uid://b7kk47h5wofxy" path="res://scenes/options/hotkey_rebind_button.tscn" id="3_756cf"]
-[ext_resource type="Texture2D" path="res://Sprite/fond/Menu2.png" id="4_8tgkp"]
+[ext_resource type="Texture2D" uid="uid://bdsk3gfwo5m15" path="res://Sprite/fond/Menu2.png" id="4_8tgkp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_by4de"]
 
@@ -107,18 +107,31 @@ action_name = "jump"
 layout_mode = 2
 action_name = "ability"
 
+[node name="hotkey_rebind_button5" parent="TabContainer/Controles/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_756cf")]
+layout_mode = 2
+action_name = "transform_water"
+
+[node name="hotkey_rebind_button6" parent="TabContainer/Controles/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_756cf")]
+layout_mode = 2
+action_name = "transform_fire"
+
+[node name="hotkey_rebind_button7" parent="TabContainer/Controles/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_756cf")]
+layout_mode = 2
+action_name = "transform_air"
+
+[node name="hotkey_rebind_button8" parent="TabContainer/Controles/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_756cf")]
+layout_mode = 2
+action_name = "transform_earth"
+
 [node name="HSeparator2" type="HSeparator" parent="TabContainer/Controles/MarginContainer/ScrollContainer/VBoxContainer"]
-visible = false
 layout_mode = 2
 theme_override_constants/separation = 10
 theme_override_styles/separator = SubResource("StyleBoxEmpty_by4de")
 
 [node name="Sons" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="Graphiques" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]

@@ -3,10 +3,11 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-
 var animationInfiltration = false
-
 const infiltrationlengh = 50	
+var is_transforming_to = null
+
+@onready var anim = $AnimationPlayer
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -23,6 +24,7 @@ func _physics_process(delta):
 	if not is_on_floor() && !Donnee.menu_visible:
 		velocity.y += gravity * delta
 		
+	
 	#Gestion infiltration
 	if !animationInfiltration:
 		if Input.is_action_just_pressed("ability")  && !Donnee.menu_visible:
@@ -39,14 +41,39 @@ func _physics_process(delta):
 	#var speed = dashspeed if dash.is_dashing() and dash.couldown_started() else SPEED
 	var speed = 0 if animationInfiltration else SPEED
 	
+	
+	if is_transforming_to != null:
+		if anim.is_playing():
+			return
+		else:
+			$"..".switch_player(is_transforming_to)
+			is_transforming_to = null
+	
+	elif Input.is_action_just_pressed("transform_water"):
+		anim.play("detransformation")
+		is_transforming_to = "base"
+	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	if Input.is_action_pressed("move_right") && !Donnee.menu_visible :
-		velocity.x = speed
-	elif Input.is_action_pressed("move_left") && !Donnee.menu_visible :
-		velocity.x = -speed
-	else: 
-		velocity.x = 0
 	
-
+	else:
+		var direction = Input.get_axis("move_left", "move_right")
+		if direction == -1:
+			$AnimatedSprite2D.flip_h = true
+		elif direction == 1:
+			$AnimatedSprite2D.flip_h = false
+		if direction:
+			velocity.x = direction * SPEED
+			if velocity.y == 0:
+				anim.play("run")
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+			if velocity.y == 0:
+				anim.play("idle")
+		
+		
+		if velocity.y > 0:
+			anim.play("fall")
+	
+	
 	move_and_slide()

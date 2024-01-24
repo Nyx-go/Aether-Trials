@@ -1,25 +1,170 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvjpk6y6gmm16"]
+[gd_scene load_steps=19 format=3 uid="uid://dvjpk6y6gmm16"]
 
 [ext_resource type="Script" path="res://Player/element_Feu/Player_Fire.gd" id="1_10bi6"]
 [ext_resource type="Texture2D" uid="uid://kgcbvffq1r0h" path="res://Sprite/Players/personnage-feu.png" id="2_ul7jg"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vwrvl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjui8"]
 atlas = ExtResource("2_ul7jg")
-region = Rect2(160, 0, 32, 80)
+region = Rect2(160, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vope"]
+atlas = ExtResource("2_ul7jg")
+region = Rect2(128, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpe4u"]
+atlas = ExtResource("2_ul7jg")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpk8x"]
+atlas = ExtResource("2_ul7jg")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cy3nb"]
+atlas = ExtResource("2_ul7jg")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmmkg"]
+atlas = ExtResource("2_ul7jg")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atqs4"]
+atlas = ExtResource("2_ul7jg")
+region = Rect2(0, 64, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn4hu"]
+atlas = ExtResource("2_ul7jg")
+region = Rect2(32, 64, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikewu"]
+atlas = ExtResource("2_ul7jg")
+region = Rect2(64, 64, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8isl"]
+atlas = ExtResource("2_ul7jg")
+region = Rect2(96, 64, 32, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_samee"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vwrvl")
+"texture": SubResource("AtlasTexture_hjui8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vope")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpe4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpk8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cy3nb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmmkg")
 }],
 "loop": true,
-"name": &"default",
+"name": &"detransformation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atqs4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yn4hu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikewu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8isl")
+}],
+"loop": true,
+"name": &"idle",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ekgg5"]
 size = Vector2(31, 63)
+
+[sub_resource type="Animation" id="Animation_yaevv"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_qdx3p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_35gcw"]
+resource_name = "detransformation "
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"detransformation"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jjd3j"]
+_data = {
+"RESET": SubResource("Animation_qdx3p"),
+"detransformation ": SubResource("Animation_35gcw"),
+"idle": SubResource("Animation_yaevv")
+}
 
 [node name="Player_fire" type="CharacterBody2D"]
 script = ExtResource("1_10bi6")
@@ -27,9 +172,11 @@ script = ExtResource("1_10bi6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_samee")
+animation = &"detransformation"
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -8.5)
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_ekgg5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -39,3 +186,6 @@ limit_right = 4352
 limit_bottom = 64
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jjd3j")
+}

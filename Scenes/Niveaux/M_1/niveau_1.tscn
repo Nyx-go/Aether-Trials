@@ -410,7 +410,9 @@ size = Vector2(16, 80)
 script = ExtResource("1_154kv")
 
 [node name="Spawner" type="Node2D" parent="."]
+position = Vector2(-2165, -8)
 script = ExtResource("3_okaee")
+metadata/_edit_group_ = true
 
 [node name="Player_fire" parent="Spawner" instance=ExtResource("5_aj40h")]
 position = Vector2(432, -28)
