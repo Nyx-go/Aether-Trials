@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dmbjhpxwvflr2"]
+[gd_scene load_steps=25 format=3 uid="uid://csuh35v5dndoe"]
 
 [ext_resource type="Texture2D" uid="uid://gct8logf0kyr" path="res://Sprite/Monde_1/tiles-sheet-hell-1.png" id="1_i4446"]
 [ext_resource type="PackedScene" uid="uid://duo22ynnygtpt" path="res://Player/PlayerBase/Player.tscn" id="2_34e6j"]
@@ -199,6 +199,8 @@ layer_0/tile_data = PackedInt32Array(0, 65536, 0, 65536, 65536, 1, 1, 131072, 0,
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_34e6j")]
 position = Vector2(40, -40)
 scale = Vector2(0.85, 0.85)
+floor_constant_speed = true
+floor_snap_length = 5.0
 
 [node name="Begin plat" type="StaticBody2D" parent="."]
 position = Vector2(141, -563)
