@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckvbr1o8of16i"]
+
+[ext_resource type="Script" path="res://Player/element_Terre/pont.gd" id="1_j6ocf"]
+[ext_resource type="Texture2D" uid="uid://cgmbmbkamjwtt" path="res://Sprite/Player_Element/player_terre.png" id="2_likx1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kym5"]
+atlas = ExtResource("2_likx1")
+region = Rect2(0, 0, 719, 182)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vld6u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kym5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xqef2"]
+size = Vector2(9489.4, 2.67785)
+
+[node name="pont" type="CharacterBody2D"]
+position = Vector2(57, 11)
+scale = Vector2(1.88319, 1.41289)
+motion_mode = 1
+script = ExtResource("1_j6ocf")
+
+[node name="Pont" type="AnimatedSprite2D" parent="." groups=["pont"]]
+position = Vector2(-74.9229, -18.279)
+scale = Vector2(0.184775, 0.0842024)
+sprite_frames = SubResource("SpriteFrames_vld6u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-74.8729, -18.4024)
+rotation = -3.14159
+scale = Vector2(0.0139897, 5.81483)
+shape = SubResource("RectangleShape2D_xqef2")
+
+[node name="Couldown" type="Timer" parent="."]
+
+[node name="Debut_pont" type="Node2D" parent="."]
+position = Vector2(-63, -25)
+
+[node name="fin_pont" type="Node2D" parent="."]
+position = Vector2(71, -25)

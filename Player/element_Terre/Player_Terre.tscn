@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://xom647txu0jj"]
+
+[ext_resource type="Script" path="res://Player/element_Terre/Player_Terre.gd" id="1_v38bm"]
+[ext_resource type="Texture2D" uid="uid://r7tk0kwcayxo" path="res://Sprite/Player_Element/personnage-terre.png" id="2_7fwtc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_je44i"]
+atlas = ExtResource("2_7fwtc")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwkyq"]
+atlas = ExtResource("2_7fwtc")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rkjn"]
+atlas = ExtResource("2_7fwtc")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0titr"]
+atlas = ExtResource("2_7fwtc")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rkmhn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_je44i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwkyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rkjn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0titr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ekgg5"]
+size = Vector2(28.7934, 168.801)
+
+[node name="Player_Terre" type="CharacterBody2D"]
+scale = Vector2(0.0243748, 0.0110891)
+script = ExtResource("1_v38bm")
+
+[node name="player" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.882021, 1.97824)
+sprite_frames = SubResource("SpriteFrames_rkmhn")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+limit_left = -10000
+limit_top = -10000
+limit_bottom = 1090
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.13449e-14, 0)
+rotation = 3.14159
+scale = Vector2(0.907039, -0.755765)
+shape = SubResource("RectangleShape2D_ekgg5")
+one_way_collision_margin = 1.1
+
+[node name="pied" type="Node2D" parent="."]
+position = Vector2(0, 180.357)
