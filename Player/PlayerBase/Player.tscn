@@ -1,8 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://duo22ynnygtpt"]
+[gd_scene load_steps=30 format=3 uid="uid://duo22ynnygtpt"]
 
 [ext_resource type="Script" path="res://Player/PlayerBase/Player.gd" id="1_516j8"]
 [ext_resource type="Texture2D" uid="uid://cluxf20xfg1vj" path="res://Sprite/Players/personnage.png" id="2_whrrn"]
 [ext_resource type="PackedScene" uid="uid://c4egrom4kvdjc" path="res://Scenes/menu/MenuPause.tscn" id="3_6lmat"]
+[ext_resource type="Texture2D" uid="uid://csu0iuvutrhch" path="res://Sprite/Players/personnage-vent.png" id="3_b3mum"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_knx58"]
 atlas = ExtResource("2_whrrn")
@@ -51,6 +52,22 @@ region = Rect2(64, 0, 32, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_mov5l"]
 atlas = ExtResource("2_whrrn")
 region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfgn8"]
+atlas = ExtResource("3_b3mum")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b07jj"]
+atlas = ExtResource("3_b3mum")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_toeua"]
+atlas = ExtResource("3_b3mum")
+region = Rect2(192, 128, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yni5h"]
+atlas = ExtResource("3_b3mum")
+region = Rect2(0, 64, 32, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s00s1"]
 animations = [{
@@ -114,7 +131,77 @@ animations = [{
 "loop": true,
 "name": &"run",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vfgn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b07jj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_toeua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yni5h")
+}],
+"loop": true,
+"name": &"transfo_air",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"transfo_eau",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"transfo_feu",
+"speed": 5.0
 }]
+
+[sub_resource type="Animation" id="Animation_iw4uy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_lvwby"]
+resource_name = "fall"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"fall"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
 
 [sub_resource type="Animation" id="Animation_m766k"]
 resource_name = "idle"
@@ -143,34 +230,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 1]
-}
-
-[sub_resource type="Animation" id="Animation_30los"]
-resource_name = "run"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"run"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
 }
 
 [sub_resource type="Animation" id="Animation_v86y2"]
@@ -229,9 +288,9 @@ tracks/1/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_lvwby"]
-resource_name = "fall"
-length = 0.2
+[sub_resource type="Animation" id="Animation_30los"]
+resource_name = "run"
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -242,7 +301,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"fall"]
+"values": [&"run"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -251,25 +310,37 @@ tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0, 1]
+"values": [0, 1, 2, 3]
 }
 
-[sub_resource type="Animation" id="Animation_iw4uy"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_447pp"]
+resource_name = "transfo_air"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
+"values": [&"transfo_air"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cafwd"]
@@ -279,7 +350,8 @@ _data = {
 "idle": SubResource("Animation_m766k"),
 "jump": SubResource("Animation_v86y2"),
 "landing": SubResource("Animation_s5w08"),
-"run": SubResource("Animation_30los")
+"run": SubResource("Animation_30los"),
+"transfo_air": SubResource("Animation_447pp")
 }
 
 [node name="Player_Base" type="CharacterBody2D"]
@@ -290,7 +362,7 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_s00s1")
-animation = &"landing"
+animation = &"transfo_air"
 frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]

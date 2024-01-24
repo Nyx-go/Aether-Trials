@@ -37,15 +37,16 @@ func _physics_process(delta):
 	#Transformation
 	
 	elif Input.is_action_just_pressed("transform_fire"):
-		anim.play("Transfo_feu")
+		anim.play("transfo_feu")
 		is_transforming_to = "fire"
 		
 	elif Input.is_action_just_pressed("transform_water"):
-		anim.play("Transfo_eau")
+		anim.play("transfo_eau")
 		is_transforming_to = "water"
 		
 	elif Input.is_action_just_pressed("transform_air"):
-		$"..".switch_player("air")
+		anim.play("transfo_air")
+		is_transforming_to = "air"
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -70,5 +71,4 @@ func _physics_process(delta):
 			anim.play("fall")
 	
 	
-
 	move_and_slide()
